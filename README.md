@@ -1,5 +1,5 @@
 # What is this?
-this is easy docker shell script generator.  
+this is easy docker shell script maker.  
 just run and enter the container name.
 
 # Install 
