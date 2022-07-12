@@ -17,7 +17,7 @@ class Script {
     } ${this.imageName}`;
   }
   public exec() {
-    return `${this.firstLine()}docker run exec -it ${
+    return `${this.firstLine()}docker exec -it ${
       this.containerName
     } /bin/sh`;
   }
