@@ -5,13 +5,16 @@ class Fs {
   private scriptsFolderPath: string;
   constructor() {
     this.scriptsFolderPath = path.resolve(process.cwd(), './scripts');
+    if (!fs.existsSync(this.scriptsFolderPath)) {
+      fs.mkdirSync(this.scriptsFolderPath);
+    }
   }
   public async writeShellScript(filename: string, text: string) {
     try {
       const filepath = `${this.scriptsFolderPath}/${filename}.sh`;
       await fs.writeFileSync(`${filepath}`, text, { encoding: 'utf8' });
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   }
 }
