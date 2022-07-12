@@ -42,7 +42,7 @@ exec.sh
 ```sh
 #!/bin/sh
 
-docker run exec -it {container-name} /bin/sh
+docker exec -it {container-name} /bin/sh
 ```
 
 rm.sh
